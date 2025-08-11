@@ -16,7 +16,7 @@ def test_database():
     print("🧪 Testing Database...")
     
     try:
-        from database import DatabaseManager
+        from ..core.database import DatabaseManager
         
         # Use temporary database for testing
         with tempfile.NamedTemporaryFile(suffix='.db', delete=False) as tmp:
@@ -83,7 +83,7 @@ def test_config():
     print("🧪 Testing Configuration...")
     
     try:
-        from config import Config
+        from ..core.config import Config
         
         # Test basic config loading
         assert hasattr(Config, 'DATABASE_PATH')
@@ -109,7 +109,7 @@ def test_scraper():
     print("🧪 Testing Scraper...")
     
     try:
-        from scraper import WebScraper
+        from ..core.scraper import WebScraper
         
         scraper = WebScraper()
         
@@ -150,7 +150,7 @@ def test_notifier():
     print("🧪 Testing Notifier...")
     
     try:
-        from notifier import EmailNotifier
+        from ..core.notifier import EmailNotifier
         
         notifier = EmailNotifier()
         
@@ -184,7 +184,7 @@ def test_price_tracker():
     print("🧪 Testing Price Tracker...")
     
     try:
-        from price_tracker import PriceTracker
+        from ..core.price_tracker import PriceTracker
         
         # Use temporary database
         with tempfile.NamedTemporaryFile(suffix='.db', delete=False) as tmp:

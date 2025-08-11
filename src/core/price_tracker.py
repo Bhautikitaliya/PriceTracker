@@ -7,10 +7,10 @@ import time
 import schedule
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
-from database import DatabaseManager
-from scraper import ScrapingManager
-from notifier import NotificationManager
-from config import Config
+from .database import DatabaseManager
+from .scraper import ScrapingManager
+from .notifier import NotificationManager
+from .config import Config
 
 # Configure logging
 logging.basicConfig(

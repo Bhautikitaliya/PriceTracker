@@ -1,0 +1,73 @@
+/* Price Tracker Dashboard Styles */
+
+.card { 
+    margin-bottom: 20px; 
+}
+
+.stats-card { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    color: white; 
+}
+
+.price-drop { 
+    color: #dc3545; 
+}
+
+.price-rise { 
+    color: #28a745; 
+}
+
+.loading { 
+    display: none; 
+}
+
+.chart-container { 
+    height: 400px; 
+}
+
+.notification-badge { 
+    position: absolute; 
+    top: -5px; 
+    right: -5px; 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .btn {
+        margin-bottom: 5px;
+    }
+    
+    .table-responsive {
+        font-size: 0.9em;
+    }
+}
+
+/* Custom animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Loading spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

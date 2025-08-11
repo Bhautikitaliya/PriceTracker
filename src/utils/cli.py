@@ -6,8 +6,8 @@ import argparse
 import sys
 import logging
 from datetime import datetime
-from price_tracker import PriceTracker
-from config import Config
+from ..core.price_tracker import PriceTracker
+from ..core.config import Config
 
 # Configure logging
 logging.basicConfig(level=getattr(logging, Config.LOG_LEVEL))
