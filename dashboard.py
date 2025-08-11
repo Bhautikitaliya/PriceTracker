@@ -10,7 +10,6 @@ from flask_cors import CORS
 import io
 import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend
-import matplotlib.pyplot as plt
 import plotly.graph_objs as go
 import plotly.utils
 import pandas as pd
@@ -42,10 +41,7 @@ def index():
         logger.error(f"Error loading dashboard: {e}")
         return render_template('error.html', error=str(e))
 
-@app.route('/test')
-def test_page():
-    """Test page for debugging."""
-    return send_file('test_dashboard.html')
+
 
 @app.route('/api/products', methods=['GET'])
 def get_products():
